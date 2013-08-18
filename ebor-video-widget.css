@@ -1,0 +1,18 @@
+.video-container, .ebor_video p {
+	position: relative;
+	padding-bottom: 54%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.video-container iframe, .ebor_video p iframe,
+.video-container object, .ebor_video p object,
+.video-container embed, .ebor_video p embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
