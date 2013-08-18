@@ -4,7 +4,7 @@
 Plugin Name: Ebor Video Widget
 Plugin URI: http://www.madeinebor.com
 Description: Adds an oEmbed widget for use in any WordPress theme.
-Version: 1.0
+Version: 1.1
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */	
@@ -20,11 +20,11 @@ function github_plugin_updater_test_init() {
 
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => 'ebor-oembed',
-			'api_url' => 'https://api.github.com/repos/tommusrhodus/ebor-oembed',
-			'raw_url' => 'https://raw.github.com/tommusrhodus/ebor-oembed/master',
-			'github_url' => 'https://github.com/tommusrhodus/ebor-oembed',
-			'zip_url' => 'https://github.com/tommusrhodus/ebor-oembed/archive/master.zip',
+			'proper_folder_name' => 'Ebor-oEmbed',
+			'api_url' => 'https://api.github.com/repos/tommusrhodus/Ebor-oEmbed',
+			'raw_url' => 'https://raw.github.com/tommusrhodus/Ebor-oEmbed/master',
+			'github_url' => 'https://github.com/tommusrhodus/Ebor-oEmbed',
+			'zip_url' => 'https://github.com/tommusrhodus/Ebor-oEmbed/archive/master.zip',
 			'sslverify' => true,
 			'requires' => '3.6',
 			'tested' => '3.6',
@@ -44,7 +44,7 @@ function github_plugin_updater_test_init() {
 function ebor_video_widget_style() {
 	wp_enqueue_style( 'ebor-video-widget-styles', plugins_url( '/ebor-video-widget.css' , __FILE__ ) );
 }
-add_action('load_styles', 'ebor_video_widget_style', 90);
+add_action('wp_enqueue_scripts', 'ebor_video_widget_style', 90);
 
 /*-----------------------------------------------------------------------------------*/
 /*	VIDEO WIDGET
